@@ -1,0 +1,6 @@
+f07310174aa763f03ce37a2e1f5f1323  docker-machine-Darwin-x86_64
+7c0e2e6c7ca425671b512897a6c49827  docker-machine-Linux-aarch64
+a5434e74415cfebff5899f74ef83e2f8  docker-machine-Linux-armhf
+50bac98e320225d04995e944ffdf348c  docker-machine-Linux-x86_64
+0bf867369463361a789a4d4cb1e54933  docker-machine-Windows-i386.exe
+3d9a29ea55188dddf98c4ca1f02dd623  docker-machine-Windows-x86_64.exe
