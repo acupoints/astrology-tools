@@ -1,7 +1,2 @@
-367ab763a78ee6ad3b5d3e769838404ad6cc68143dad48870127afeffd6bcc83  docker-machine-Darwin-x86_64
-109f534bfb8b9b852c938cad978e60a86b13f5ecf92da5e24320dacd2a7216ac  docker-machine-Linux-aarch64
-07f8f7c4e82905d0c9a6fe6f0e84667907f3e1a17d7712e918e76975b67dc6e3  docker-machine-Linux-armhf
-a7f7cbb842752b12123c5a5447d8039bf8dccf62ec2328853583e68eb4ffb097  docker-machine-Linux-x86_64
-2b67d7b6cd95983bdb01da472a541052f3ca236950354c7e76f215fbf9188745  docker-machine-Windows-i386.exe
-dcf774857069749b5d973f85b15d926544a7c5556c3478c45b4f35cf86494130  docker-machine-Windows-x86_64.exe
-4lV/cPaaBE4hWvkXcuAQ5ZM6ekE= daemons.zip
+4lV/cPaaBE4hWvkXcuAQ5ZM6ekE= daemons2.zip;deprecated
+4lV/cPaaBE4hWvkXcuAQ5ZM6ekE= daemons.zip;recommended
