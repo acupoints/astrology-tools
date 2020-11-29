@@ -1,3 +1,6 @@
+## 克隆备用工具库
+git clone https://github.com/acupoints/astrology-tools.git
+
 ## 安装 docker-compose
 mv astrology-tools/docker-compose-1.27.4/docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
