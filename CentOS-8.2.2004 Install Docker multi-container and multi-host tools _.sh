@@ -1,3 +1,9 @@
+## 安装 git
+sudo dnf install git -y
+git --version
+git config --global user.name "Gullies"
+git config --global user.email "1448991007@qq.com"
+
 ## 克隆备用工具库
 git clone https://github.com/acupoints/astrology-tools.git
 
