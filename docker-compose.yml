@@ -1,16 +1,20 @@
-version: "3"
+version: "3.1"
 services: 
   nginx:
-    image: nginx:1.19.5
     restart: always
-    volumes: 
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./data:/usr/share/nginx/html
-    environment: 
-      - TZ=Asia/Shanghai
+    image: nginx:1.19.5
     ports: 
       - 80:80
-#       - fy-volumes:fy-data
+      - 443:443
+      - 8000:8000
+    volumes: 
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx_html:/usr/share/nginx/html
+      - ./4803322_fy1m.cn.pem:/etc/fy1m_cert/4803322_fy1m.cn.pem
+      - ./4803322_fy1m.cn.key:/etc/fy1m_cert/4803322_fy1m.cn.key
+      # - fy-volumes:fy-data
+    environment: 
+      - TZ=Asia/Shanghai
 #     networks: 
 #       - fy-networks
 # networks: 
