@@ -1,6 +1,6 @@
 # STEPS
 
-## 上传下载
+## 上传和下载文件
 ```bash
 npm config set registry https://registry.npm.taobao.org
 npm config set registry https://registry.npmjs.org/
@@ -11,6 +11,10 @@ cp Dockerfile web/
 # rm -rf web/node_modules/
 scp -r ../astrology-tools/ gullies@10.5.12.115:/home/gullies
 scp -r docker-react-app\ gullies@192.168.56.112:~
+
+## 上传，并解压证书
+λ scp 4803322_fy1m.cn_nginx.zip gullies@192.168.56.112:~
+[root@localhost gullies]# unzip 4803322_fy1m.cn_nginx.zip -d fy_cert
 
 ```
 
@@ -56,4 +60,8 @@ firewall-cmd --list-ports
 
 ```
 
-
+## mongo添加新的数据库
+```bash
+MONGO_INITDB_DATABASE 无需指定
+MONGO_INITDB_DATABASE 设置为 
+```
