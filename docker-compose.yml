@@ -40,7 +40,7 @@ services:
         container_name: fy_mongo
         restart: always
         environment:
-            MONGO_INITDB_ROOT_USERNAME: mongo_prod
+            MONGO_INITDB_DATABASE: mongo_prod
             MONGO_INITDB_ROOT_USERNAME: glsroot
             MONGO_INITDB_ROOT_PASSWORD: Umph2014
         ports:
@@ -63,7 +63,7 @@ services:
     volumes: 
         - ./nginx.conf:/etc/nginx/nginx.conf
         - ./nginx_html:/usr/share/nginx/html
-        - ./4803322_fy1m.cn.pem:/etc/fy1m_cert/4803322_fy1m.cn.pem
-        - ./4803322_fy1m.cn.key:/etc/fy1m_cert/4803322_fy1m.cn.key
+        - ./4803322_fy1m.cn.pem:/etc/fy_cert/4803322_fy1m.cn.pem
+        - ./4803322_fy1m.cn.key:/etc/fy_cert/4803322_fy1m.cn.key
 
 
