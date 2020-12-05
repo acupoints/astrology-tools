@@ -64,5 +64,5 @@ services:
         volumes: 
             - ./nginx.conf:/etc/nginx/nginx.conf
             - ./nginx_html:/usr/share/nginx/html
-            - ./fy_cert/4803322_fy1m.cn.pem:/etc/fy_cert/4803322_fy1m.cn.pem
-            - ./fy_cert/4803322_fy1m.cn.key:/etc/fy_cert/4803322_fy1m.cn.key
+            - ../fy_cert/4803322_fy1m.cn.pem:/etc/fy_cert/4803322_fy1m.cn.pem
+            - ../fy_cert/4803322_fy1m.cn.key:/etc/fy_cert/4803322_fy1m.cn.key
