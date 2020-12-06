@@ -16,6 +16,14 @@ scp -r docker-react-app\ gullies@192.168.56.112:~
 λ scp 4803322_fy1m.cn_nginx.zip gullies@192.168.56.112:~
 [root@localhost gullies]# unzip 4803322_fy1m.cn_nginx.zip -d fy_cert
 
+## 拷贝文件夹下的所有文件到目标文件夹
+# 目标文件夹已存在
+# cp -r ../heroku-ruby-boilerplate/public/* nginx_html/
+cp -r ../heroku-ruby-boilerplate/public/. nginx_html/
+# 目标文件夹不存在
+cp -r ../heroku-ruby-boilerplate/public/ nginx_html/
+## 删除网站根目录需要重启服务
+docker-compose restart
 ```
 
 ## 查看源码
