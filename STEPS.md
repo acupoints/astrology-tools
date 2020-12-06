@@ -1,11 +1,14 @@
 # STEPS
 
 ## 更新源码库
-```
+```bash
 git fetch --all
 git reset --hard origin/master
-rm -rf nginx_html/*
-cp -r ../heroku-ruby-boilerplate/public/. nginx_html/
+# rm -rf nginx_html/*
+# cp -r ../heroku-ruby-boilerplate/public/. nginx_html/
+
+docker-compose up -d --build
+
 ```
 
 ## 上传和下载文件
