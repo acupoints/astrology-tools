@@ -60,6 +60,7 @@ services:
       - 8000:8000
     volumes: 
       - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx_html:/usr/share/nginx/html
+      # - ./nginx_html:/usr/share/nginx/html
+      - ../heroku-ruby-boilerplate/public:/usr/share/nginx/html
       - ../fy_cert/4803322_fy1m.cn.pem:/etc/fy_cert/4803322_fy1m.cn.pem
       - ../fy_cert/4803322_fy1m.cn.key:/etc/fy_cert/4803322_fy1m.cn.key

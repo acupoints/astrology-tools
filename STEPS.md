@@ -4,6 +4,8 @@
 ```
 git fetch --all
 git reset --hard origin/master
+rm -rf nginx_html/*
+cp -r ../heroku-ruby-boilerplate/public/. nginx_html/
 ```
 
 ## 上传和下载文件
