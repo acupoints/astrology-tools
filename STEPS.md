@@ -1,5 +1,11 @@
 # STEPS
 
+## 更新源码库
+```
+git fetch --all
+git reset --hard origin/master
+```
+
 ## 上传和下载文件
 ```bash
 npm config set registry https://registry.npm.taobao.org
