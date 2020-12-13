@@ -1,12 +1,30 @@
 # STEPS
 
-## STEP 01
+## STEP-01
 ```bash
-# npm install -g express-generator
-express --view=hbs .
-# express --view=ejs .
-npm install
-npm start
-# http://localhost:3000/
+touch .dockerignore
+touch Dockerfile
+touch docker-compose.yml
+# touch STEPS.md
 
+# scp -r temp2/ gullies@192.168.56.112:~
+docker rm $(docker ps -aq)
+docker rmi $(docker images | grep none | awk '{print $3}')
+
+##
+docker-compose build
+docker-compose run --rm --service-ports ruby_dev
+
+rails new myapp && cd myapp
+bundle update && bundle install
+
+# bundle exec rails webpacker:install
+rails server -p $PORT -b 0.0.0.0
+
+```
+
+##
+```bash
+# debconf: delaying package configuration, since apt-utils is not installed
+# Warning: apt-key output should not be parsed (stdout is not a terminal)
 ```

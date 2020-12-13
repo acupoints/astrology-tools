@@ -1,9 +1,13 @@
 version: "3.8"
+
 services:
-  dev:
+  ruby_dev:
+    container_name: ruby_container
+    network_mode: host
     build:
       context: .
       network: host
     ports:
       - "3000:3000"
-    command: "npm start"
+    volumes:
+      - ./:/home/app
