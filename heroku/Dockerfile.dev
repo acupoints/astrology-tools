@@ -1,0 +1,20 @@
+FROM node:12.20.0-alpine as node
+# RUN yarn install --check-files
+FROM ruby:2.6.5-alpine
+COPY --from=node /usr/local/bin/node /usr/local/bin/node
+COPY --from=node /opt/yarn-* /opt/yarn
+RUN ln -fs /opt/yarn/bin/yarn /usr/local/bin/yarn
+
+RUN apk update && apk add sqlite-dev build-base libxml2-dev libxslt-dev
+RUN apk add postgresql-dev
+WORKDIR /application
+COPY . /application
+RUN rm -rf yarn.lock
+RUN echo "gem 'tzinfo-data'">>Gemfile
+WORKDIR /application
+
+RUN gem install bundler:1.17.3
+RUN bundle install --jobs=20
+EXPOSE 3000
+# CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
+CMD ["rails", "server", "-b", "0.0.0.0"]
