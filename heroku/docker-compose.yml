@@ -22,6 +22,8 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: Umph2014
       POSTGRES_DB: rails_server_development
+    networks: 
+      - custom_net
   postgres:
     image: postgres:12.5-alpine
     container_name: fy_postgres
@@ -34,6 +36,8 @@ services:
       POSTGRES_PASSWORD: Umph2014
     volumes:
       - /data/postgresql:/var/lib/postgresql/data
+    networks: 
+      - custom_net
   redis:
     image: redis:5.0.10
     container_name: fy_redis
@@ -43,5 +47,9 @@ services:
       - "6379:6379"
     volumes:
       - /data/redis:/data
-
-      
+    networks: 
+      - custom_net
+networks: 
+  custom_net: 
+    external: 
+      name: app_net
