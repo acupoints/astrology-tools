@@ -43,6 +43,7 @@ docker stop $(docker ps -aq)
 docker rm $(docker ps -aq)
 
 docker-compose up -d
+docker-compose up -d --no-cache
 
 /app # busybox-extras telnet localhost 5432
 /app # busybox-extras telnet 172.26.0.2 5432
