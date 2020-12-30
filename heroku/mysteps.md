@@ -58,6 +58,7 @@ scp -r heroku-ruby-boilerplate/ gullies@192.168.56.112:~
 
 # docker-compose up -d
 
+# docker-compose exec postgres ln -s /tmp/.s.PGSQL.5432 /var/run/postgresql/.s.PGSQL.543
 docker-compose exec web rake db:migrate
 docker-compose exec postgres cat /etc/hosts
 
