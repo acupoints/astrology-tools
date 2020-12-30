@@ -43,7 +43,6 @@ docker stop $(docker ps -aq)
 docker rm $(docker ps -aq)
 
 docker-compose up -d
-docker-compose up -d --no-cache
 
 /app # busybox-extras telnet localhost 5432
 /app # busybox-extras telnet 172.26.0.2 5432
@@ -52,12 +51,6 @@ docker-compose up -d --no-cache
 # scp -r heroku-ruby-boilerplate\ gullies@192.168.56.116:~
 192.168.56.112
 scp -r heroku-ruby-boilerplate/ gullies@192.168.56.112:~
-
-
-# docker stop $(docker ps -aq)
-# docker rm $(docker ps -aq)
-
-# docker-compose up -d
 
 # docker-compose exec postgres ln -s /tmp/.s.PGSQL.5432 /var/run/postgresql/.s.PGSQL.543
 docker-compose exec web rake db:migrate
