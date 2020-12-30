@@ -72,6 +72,17 @@ firewall-cmd --zone=public --add-masquerade --permanent
 firewall-cmd --reload
 systemctl restart docker
 #####################################################
+docker network create app_net
+docker network ls
+# 
+networks:
+    - custom_net
+networks:
+  custom_net:
+   external:
+      name: app_net
+
+
 docker-compose run web rake db:migrate
 ###
 http://dl-cdn.alpinelinux.org/alpine/v3.11/community
