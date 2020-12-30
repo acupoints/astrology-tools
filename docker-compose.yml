@@ -64,3 +64,9 @@ services:
       - ../heroku-ruby-boilerplate/public:/usr/share/nginx/html
       - ../fy_cert/4803322_fy1m.cn.pem:/etc/fy_cert/4803322_fy1m.cn.pem
       - ../fy_cert/4803322_fy1m.cn.key:/etc/fy_cert/4803322_fy1m.cn.key
+    networks: 
+      - custom_net
+networks: 
+  custom_net: 
+    external:
+      name: heroku-ruby-boilerplate_default
