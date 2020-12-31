@@ -69,4 +69,5 @@ services:
 networks: 
   custom_net: 
     external: 
-      name: app_net
+      # name: app_net
+      name: heroku-ruby-boilerplate_default
