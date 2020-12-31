@@ -58,6 +58,8 @@ services:
       - 80:80
       - 443:443
       - 8000:8000
+    external_links: 
+      - web
     volumes: 
       - ./nginx.conf:/etc/nginx/nginx.conf
       # - ./nginx_html:/usr/share/nginx/html
@@ -69,5 +71,4 @@ services:
 networks: 
   custom_net: 
     external: 
-      # name: app_net
-      name: heroku-ruby-boilerplate_default
+      name: app_net
