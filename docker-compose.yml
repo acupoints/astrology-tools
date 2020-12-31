@@ -68,5 +68,5 @@ services:
       - custom_net
 networks: 
   custom_net: 
-    external: true
-      # name: app_net
+    external: 
+      name: app_net
