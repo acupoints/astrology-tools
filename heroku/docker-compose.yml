@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile.dev
       network: host
     restart: always
-    container_name: rails_demo
+    # container_name: rails_demo
     ports:
       - "3000:3000"
     depends_on:
