@@ -18,8 +18,8 @@ services:
     environment:
       REDIS_URL: redis://redis:6379/
       DATABASE_URL: postgres://postgres:Umph2014@postgres:5432/rails_server_development
-      # RAILS_ENV: 'development'
-      RAILS_ENV: 'production'
+      RAILS_ENV: 'development'
+      # RAILS_ENV: 'production'
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: Umph2014
       POSTGRES_DB: rails_server_development
