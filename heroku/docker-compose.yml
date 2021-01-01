@@ -60,8 +60,10 @@ services:
       - 80:80
       - 443:443
       - 8000:8000
-    external_links: 
-      - rails_demo:web_1
+    # external_links: 
+    #   - rails_demo:web_1
+    links: 
+      - web:web_1
     volumes: 
       - ./nginx.conf:/etc/nginx/nginx.conf
       # - ./nginx_html:/usr/share/nginx/html
