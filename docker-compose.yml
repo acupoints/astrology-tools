@@ -67,8 +67,7 @@ services:
       - ../fy_cert/4803322_fy1m.cn.pem:/etc/fy_cert/4803322_fy1m.cn.pem
       - ../fy_cert/4803322_fy1m.cn.key:/etc/fy_cert/4803322_fy1m.cn.key
     networks: 
-      - custom_net
+      - app_net
 networks: 
-  custom_net: 
-    external: 
-      name: app_net
+  app_net: 
+    external: true
