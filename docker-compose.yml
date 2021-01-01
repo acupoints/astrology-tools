@@ -67,7 +67,7 @@ services:
       - ../fy_cert/4803322_fy1m.cn.pem:/etc/fy_cert/4803322_fy1m.cn.pem
       - ../fy_cert/4803322_fy1m.cn.key:/etc/fy_cert/4803322_fy1m.cn.key
     networks: 
-      - heroku-ruby-boilerplate_default_app_net
+      - heroku-ruby-boilerplate_app_net
 networks: 
-  heroku-ruby-boilerplate_default_app_net: 
+  heroku-ruby-boilerplate_app_net: 
     external: true
